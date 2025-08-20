@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawn Care Coach</title>
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#16a34a" />
+    <meta name="theme-color" content="#4CAF50" />
+    <link rel="icon" href="/icons/icon-192.png" />
+    <!-- iOS用（ホーム追加時のアイコン＆フルスクリーン化） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -28,5 +32,12 @@
   <body class="bg-gray-50">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(console.error);
+        });
+      }
+    </script>
   </body>
 </html>
