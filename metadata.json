@@ -1,0 +1,5 @@
+{
+  "name": "Lawn Care Coach",
+  "description": "A web application to help homeowners manage their lawn care schedule, tasks, and inventory. It provides automated task recommendations, calculates necessary amounts for fertilizer and watering, and tracks costs.",
+  "requestFramePermissions": []
+}
